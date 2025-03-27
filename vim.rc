@@ -1,4 +1,5 @@
 " GLOBAL
+
 set incsearch
 set hlsearch
 
@@ -34,4 +35,3 @@ let g:netrw_list_hide= '.*\.swp$'
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 call plug#end()
-

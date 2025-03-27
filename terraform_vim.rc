@@ -60,23 +60,19 @@ hi def link hclSmartString              String
 
 " MY OWN KEYMAPS
 
-" COPY THE WORD UNDER THE CURSER TO Z REGISTER
-nnoremap <leader>c bve"zy
-
-" PASTE THE Z REGISTER
-nnoremap <leader>p "zp
-
-" 
-nnoremap <leader>v read $HOME/.vim/snippets/terraform/variable.block<CR>f"a
 
 " CREATES A VARIABLE IN variable.tf BY CALLING THE OpenVariableFile FUNC
-nnoremap <leader>s bve"zy :exe "call" OpenVariableFile(".@z.")<CR>
+map <leader>s :-1read $HOME/.vim/snippets/terraform/variable.block<CR>f"
+
+map <leader>c bve"zy
+map <leader>p "zp
+
 
 " COMMENT OUT THE SELECTION
-vmap <leader>c :s/^/#/g<CR>
+vmap ,com :s/^/#/g<CR>
 
 " TAKE THE COMMENTED OUT ONES PREVIOUSLY
-vmap <leader>C :s/^#//g<CR>
+vmap ,ucom :s/^#//g<CR>
 
 " MY OWN FUNCTIONS
 
@@ -84,19 +80,24 @@ function FindVariableFile()
   return expand('%:p:h'). "/variable.tf"
 endfunction
 
-func! OpenVariableFile(variable_name)
+func! OpenVariableFile(var)
   let tf_file_name = expand('%:p:h'). "/variable.tf"
-  let @z = a:variable_name
+  let @w=a:var
   execute "vsp" tf_file_name
   $
   execute "read" "~/.vim/snippets/terraform/variable.block"
-  call feedkeys("f\"")
-  call feedkeys("\"zp") 
+  norm f"
+  norm "wp
 endfun
 
 func! CiaTest(variable_name)
-  echo a:variable_name
+  let file=expand('%:t')
+  echo file
 endfun
+
+let file=expand('%:t')
+autocmd BufNewFile,BufRead *.tf,*.tfvars if file == 'variable.tf' | setf tfvars | endif
+
 
 :autocmd BufWritePost * silent !terraform fmt
 
