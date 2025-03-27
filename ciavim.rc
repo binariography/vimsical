@@ -1,7 +1,0 @@
-syntax enable
-
-syntax enable
-set autoindent
-setlocal shiftwidth=2
-setlocal expandtab
-setlocal softtabstop=2
