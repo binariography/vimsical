@@ -6,6 +6,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 
 
 ### Exiting
+
+| Keys | Description|
+|-----|-----|
 |:w |write (save) the file, but don't exit|
 |:wq |write (save) and quit|
 |:x |write (save) and quit|
@@ -16,6 +19,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |ZQ |quit without checking for changes|
 
 ### Cursor Movement
+
+| Keys | Description|
+|-----|-----|
 |h |move cursor left|
 |j |move cursor down|
 |k |move cursor up|
@@ -44,6 +50,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |3, F, x |jump to 3rd instance of character x back from cursor on current line.|
 
 ### Screen Movement
+
+| Keys | Description|
+|-----|-----|
 |Ctrl u |move screen up by half page|
 |Ctrl b |move screen up by one page|
 |Ctrl d |move screen down by half page|
@@ -62,6 +71,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |Esc |exit insert mode|
 
 ### Editing
+
+| Keys | Description|
+|-----|-----|
 |r |replace a single character|
 |J |join line below to the current one|
 |cc |change (replace) entire line|
@@ -75,6 +87,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |. |repeat last command|
 
 ### Cut and Paste
+
+| Keys | Description|
+|-----|-----|
 |yy |yank (copy) a line|
 |2yy |yank (copy) 2 lines|
 |:n,Ny |yank lines n through N|
@@ -91,6 +106,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |x |delete (cut) character|
 
 ### Search and Replace
+
+| Keys | Description|
+|-----|-----|
 |* |search for word under cursor|
 |/pattern |search for pattern|
 |?pattern |search backward for pattern|
@@ -100,6 +118,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |:%s/old/new/gc |replace all old with new throughout file with confirmations|
 
 ### Marking Text (Visual Mode)
+
+| Keys | Description|
+|-----|-----|
 |v |start visual mode, mark lines, then do a command (like y-yank)|
 |V |start linewise visual mode|
 |vo |move to other end of marked area|
@@ -113,6 +134,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |Esc |exit visual mode|
 
 ### Visual Commands
+
+| Keys | Description|
+|-----|-----|
 |> |shift text right|
 |< |shift text left|
 |== |auto-indent current line|
@@ -123,6 +147,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |~ |switch case|
 
 ### Working with Multiple Files
+
+| Keys | Description|
+|-----|-----|
 |:e filename |edit a file in a new buffer|
 |:ene |open a blank file for editing|
 |:bnext / :bn |go to the next buffer|
@@ -148,6 +175,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |Ctrl w, = |equalize size of windows|
 
 ### Tabs
+
+| Keys | Description|
+|-----|-----|
 |#gt |move to tab number #|
 |Ctrl w, t |move the current split window into its own tab|
 |:tabmove # |move current tab to the #th position (indexed from 0)|
@@ -158,6 +188,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |gT / :tabprev / :tabp |move to the previous tab|
 
 ### Registers
+
+| Keys | Description|
+|-----|-----|
 |:reg / :registers |view all current registers|
 |echo @r |access register `r` as a variable|
 |"/ |last search pattern register|
@@ -172,6 +205,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |qr |record into register `r`|
 
 ### Additional Ex Commands
+
+| Keys | Description|
+|-----|-----|
 |:mak / :make |run a compiler and enter quickfix mode|
 |:! |execute external shell command|
 |:r / :read |read external program output into current file|
@@ -184,6 +220,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |:%TOhtml |create html representation of current working buffer|
 
 ### Basic Configuration
+
+| Keys | Description|
+|-----|-----|
 |:set nu |show line numbers|
 |:set hid |lets you switch buffers without saving|
 |:set hls |highlight search matches|
@@ -191,6 +230,9 @@ Learning vim is slow, but once you learn how to manouver around with only keyboa
 |:set ru |show line and column number of the cursor|
 
 ### Folding Commands
+
+| Keys | Description|
+|-----|-----|
 |zf#j |creates a fold from the cursor down # lines|
 |zf/ |string creates a fold from the cursor to string|
 |zj |moves the cursor to the next fold|
