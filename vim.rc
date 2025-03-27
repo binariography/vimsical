@@ -3,7 +3,7 @@ set incsearch
 set hlsearch
 
 " the leader character
-let mapleader = " "
+let mapleader = ","
 
 set foldmethod=indent
 
@@ -17,6 +17,10 @@ filetype plugin on
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
+set wildmenu
+
+" TAG Jumping
+command! MakeTags !ctags -R .
 
 " Tweaks for browsing
 
@@ -27,6 +31,7 @@ let g:netrw_altv = 1         " open splits to the right
 let g:netrw_winsize = 80
 let g:netrw_list_hide= '.*\.swp$'
 
-autocmd BufRead *.tf,*.tfvars source ~/.vim/terraform_vim.rc
-autocmd BufRead *.py source ~/.vim/python_vim.rc
+call plug#begin()
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+call plug#end()
 
